@@ -1,0 +1,13 @@
+<div class="card" style="width: 25rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{taskItem.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{taskItem.dateFrom |  date: 'short' | lowercase}} -- {{taskItem.dateTo |  date: 'short' | lowercase}}</h6>
+      <p class="card-text">{{taskItem.description}}</p>
+      <select [(ngModel)]="taskItem.type" (change)="onSelectValueChange($event)" class="form-control">
+        <option value="1">ToDo</option>
+        <option value="2">InProgress</option>
+        <option value="3">Done</option>
+      </select>
+      <button (click)="removeListItem()" class="btn btn-danger col-md-12 d-block">Remove</button>
+    </div>
+  </div>

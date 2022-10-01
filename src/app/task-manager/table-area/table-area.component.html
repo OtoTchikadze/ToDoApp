@@ -1,0 +1,41 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">To Do</th>
+        <th scope="col">In Progress</th>
+        <th scope="col">Done</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <ul class="list-group">
+            <li [ngStyle]="{'background-color' : 'blue'}" class="list-group-item">
+              <app-table-area-card *ngFor="let item of tableArea.toDo" 
+                                    [taskItem]="item"
+                                    (removedItem)="onRemoveFromToDo($event)"></app-table-area-card>
+            </li>
+          </ul>
+        </td>
+        <td>
+          <ul class="list-group">
+            <li [ngStyle]="{'background-color' : 'yellow'}" class="list-group-item">
+              <app-table-area-card *ngFor="let item of tableArea.inProgress"
+                                    [taskItem]="item"
+                                    (removedItem)="onRemoveFromInProgress($event)"></app-table-area-card>
+            </li>
+          </ul>
+        </td>
+        <td>
+          <ul class="list-group">
+            <li [ngStyle]="{'background-color' : 'green'}" class="list-group-item">
+              <app-table-area-card *ngFor="let item of tableArea.done" 
+                                    [taskItem]="item"
+                                    (removedItem)="onRemoveFromDone($event)"
+              ></app-table-area-card>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+</table>

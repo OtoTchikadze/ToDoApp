@@ -1,0 +1,12 @@
+.form-group{
+    margin: 20px 0px;
+}
+
+article {
+    padding: 50px 50px 0px 50px;
+    box-sizing: border-box;
+}
+
+label,h2 {
+    color: white;
+}

@@ -1,0 +1,27 @@
+<article>
+    <h2>My ToDo-s</h2>
+    <div class="form-group">
+        <label for="">Enter Task Title</label>
+        <input [(ngModel)]="taskItem.title" type="text" placeholder="Enter here" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="">Enter Date From</label>
+        <input [(ngModel)]="taskItem.dateFrom" type="datetime-local" placeholder="Enter from" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="">Enter Date To</label>
+        <input [(ngModel)]="taskItem.dateTo" type="datetime-local" placeholder="Enter to" class="form-control">
+    </div> 
+    <div class="form-group">
+        <label for="">Enter Task Description</label>
+        <textarea [(ngModel)]="taskItem.description" type="text" placeholder="Enter here" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <button 
+        (click)="onSaveBtnClick()"
+        class="btn btn-dark col-md-12 d-block">Save</button>
+    </div>
+</article>
+<br>
+<hr>
+<br>

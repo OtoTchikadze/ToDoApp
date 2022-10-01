@@ -1,0 +1,8 @@
+<section class="col-md-10 m-auto">
+    <article class="col-md-6 m-auto">
+        <app-filler-form (onTaskSaveEmitter)="onTaskSaveSubscribe($event)"></app-filler-form>
+    </article>
+    <article class="col-md-10 m-auto">
+        <app-table-area [tableArea]="taskList"></app-table-area>
+    </article>
+</section>
